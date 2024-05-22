@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+</head>
+    <title>Bank of Sunrise</title>
+</head>
+<body>
+    <nav class="nav">
+        <h1>Bank of Sunrise</h1>
+        <span class="material-symbols-outlined">
+            account_balance
+            </span>
+        <div class="navbutton">
+          <input type="text" placeholder="username" class="login">
+          <input type="password" name="password" id="password" placeholder="password" class="login" maxlength="4">  
+           <div class="nav_login"><button class="button">Login</button></div>
+        </div>  
+    </nav>
+    <p id="error"></p>
+    <div class="button_container">
+        <button class="logout">Log Out</button>
+    </div>
+
+    <main id="main_el">
+      <p class="welcome"></p>
+        <!-----Balance------>
+        <div class="balance_label_main">
+            <div class="balance_label">
+              <p class="balance_current">Current Balance</p>
+              <p class="balance_date">25/04/2024</p>  
+            </div>
+            <p class="balance_value">£12000</p>
+        </div>
+        <!-----Movements----->
+
+     <div class="main_container">
+      <div>
+         <section class="sum"> 
+        <div class="movements">
+                <div class="movements_list">
+                   <div class="movements_type_deposit">2 deposit</div>
+                   <div class="movements_date">25/03/2024</div>
+                   <div class="movements_value">£1000</div> 
+                </div>
+                <div class="movements_list">
+                   <div class="movements_type_withdrawal">1 withdrawal</div>
+                   <div class="movements_date">25/03/2024</div>
+                   <div class="movements_value">£200</div> 
+              </div>
+            </div>
+        </section>
+
+        <!---summary-->
+        <section class="sum">
+          <div class="summary_container">
+            <div class="summary_min">
+             <p>In</p>
+             <p class="summary_in">£2500</p>
+            </div>
+            <div class="summary_min">
+             <p>Out</p>
+             <p class="summary_out">£250</p>
+            </div>
+            <div class="summary_min">
+             <p>Interest</p>
+             <p class="summary_interest">£260</p>
+            </div>
+           <button class="sort_button">Sort</button>
+          </div> 
+        </section>
+      </div>
+           <!----CONTROLS-->
+        <section>
+           <div class="container_control">
+
+            <!----Transfer-->
+
+              <div class="transfer_control">
+                <h2>Transfer Money</h2>
+                <div class="transfer_container">
+                    <div class="transferto">
+                      <input type="text" name="texttransfer" id="texttransfer">
+                      <label for="texttransfer">Transfer to</label>  
+                    </div>
+                   <div class="amount">
+                    <input type="text" name="transfer_amount" id="transfer_amount">
+                    <label for="transfer_amount">Amount</label>
+                   </div> 
+                </div>
+                <button type="submit" class="transfer_button">Send</button>
+              </div>
+
+              <!-----Request---->
+
+              <div class="request_control">
+                <h2>Request Loan</h2>
+                <div class="request_cont">
+                  <input type="text" name="request" id="request">
+                  <label for="request">Amount</label>  
+                </div>
+
+                <button type="submit" class="request_button">Send</button>
+              </div>
+
+              <!-----Close Account---->
+
+              <div class="close_control">
+                <h2>Close Account</h2>
+                <div class="close_account">
+                <div class="user">
+                    <input type="text" name="user" id="user">
+                    <label for="user">Confirm user</label>
+                </div>
+                <div class="pin">
+                    <input type="text" name="pin" id="pin" maxlength="4">
+                    <label for="pin">User pin</label>
+                </div>
+                </div>
+                <button type="submit" class="close_button">Send</button> 
+              </div>
+           </div>
+        </section> 
+    </div>
+
+       <!----Timer---->
+
+       <div>
+        <p>You will be logged out in <span class="timer">05:00</span></p> 
+       </div>
+    </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
