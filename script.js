@@ -229,9 +229,9 @@ const displayMovements = function(acc, sort = false) {
 
       const html = `
       <div class="movements_list">
-          <p class="movements_type_${type}">${i + 1} ${type}</p>
-          <p class="movements_date">${useDate}</p>
-          <p class="movements_value">${formatMovement}</p>
+          <div class="movements_type_${type}">${i + 1} ${type}</div>
+          <div class="movements_date">${useDate}</div>
+          <div class="movements_value">${formatMovement}</div>
       </div>`;
 
       movementsIndex.insertAdjacentHTML("afterbegin", html);
